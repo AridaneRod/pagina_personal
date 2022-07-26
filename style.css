@@ -59,7 +59,7 @@ header{
 }
 .principal_content{
     width: 600px;
-    margin: 2rem;
+    margin: 1rem;
     align-self: flex-end;
 }
 .principal_content h3{
@@ -115,7 +115,7 @@ strong{
     }
 }
 
-@media (max-width:1195px) {
+@media (max-width:1163px) {
     .personal_photo{
         margin-top: 15vh ;
     }
