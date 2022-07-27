@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     margin: 0;
@@ -16,12 +19,25 @@ header{
     position: fixed;
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     background-color: #1a1b1f;
     padding: 2rem 0;
     padding-bottom: 0.4rem;
+}
+nav{
+    border-bottom: #fff solid 0.1rem;
+    padding: 0.5rem;
+    margin: 0 2rem;
+}
+nav a{
+    text-decoration: none;
+    color: #c2c5ca;
+    padding: 1rem;
+}
+nav a:hover{
+    color: #fff;
 }
 
 .download_cv{
@@ -50,10 +66,10 @@ header{
 .personal_photo{
     max-width: 500px;
     margin: 1rem;
-    margin-top: 25vh ;
+    padding-top: 25vh ;
 }
 .personal_photo img{
-    border-radius: 100%;
+    border-radius: 1000px;
     width: 100%;
     height: auto;
 }
@@ -62,9 +78,7 @@ header{
     margin: 1rem;
     align-self: flex-end;
 }
-.principal_content h3{
-    text-align: justify;
-}
+
 strong{
     color: #35bbea;
 }
@@ -93,6 +107,97 @@ strong{
 
 }
 
+.flecha{
+    display: flex;
+    justify-content: center;
+    margin: 28px 0;
+    animation: show 1s ease-in-out 1.5s backwards;
+}
+
+.flecha a{
+    transition: transform 0.3s;
+}
+
+.flecha a:hover{
+    transform: scale(1.2);
+}
+
+
+/********************** Articles and portfolio **********************/
+
+#articles-portfolio{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+}
+.secciones{
+    min-width: 300px;
+    max-width: 600px;
+    margin: 2rem;
+    min-height: 80vh;
+}
+.secciones h2{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.articulo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+.articulo p{
+    color: #cacaca;
+}
+
+.articulo img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    padding: 0.5rem;
+    padding-right:10px;
+    border-radius: 20px;
+}
+
+.articulo div{
+    min-width: 300px;
+    max-width: 450px;
+    padding-right: 1rem;
+}
+
+.articulo:hover{
+    background: rgba(0, 0, 0, 0.55);;
+}
+
+/********************** Footer *************************/
+
+footer{
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    margin: 24px;
+    margin-top: 24px;
+    border-radius: 10px;
+}
+footer a:hover{
+    background-color:rgba(69, 69, 69, 0.591) ;
+}
+
+
 /********************** Animations **********************/
 
 @keyframes show{
@@ -115,8 +220,44 @@ strong{
     }
 }
 
+@media (max-width:680px) {
+    .articulo{
+        max-width: 350px;
+    }
+    .articulo img{
+        width: 100%;
+        height: 100%;
+    }
+    .articulo div{
+        text-align: center;
+        padding:0.5rem ;
+    }
+}
+@media (max-width:580px){
+    header{
+        justify-content: center;
+        padding-bottom: 0;
+        padding-top: 0.5rem;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav a{
+        flex: 1;
+        text-align: center;
+    }
+    .download_cv{
+        margin: 1rem 0;
+    }
+
+    #articles-portfolio{
+        padding-top: 25vh;
+    }
+}
 @media (max-width:1163px) {
-    .personal_photo{
-        margin-top: 15vh ;
+    .personal_photo img{
+        border-radius: 20px;
     }
 }
