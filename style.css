@@ -18,23 +18,28 @@ h1{
 header{
     position: fixed;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1500px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 2rem;
     background-color: #1a1b1f;
-    padding: 2rem 0;
-    padding-bottom: 0.4rem;
+    z-index: 2;
+}
+header img{
+    display: none;
 }
 nav{
     border-bottom: #fff solid 0.1rem;
     padding: 0.5rem;
-    margin: 0 2rem;
 }
 nav a{
     text-decoration: none;
     color: #c2c5ca;
-    padding: 1rem;
+    margin: 1rem;
 }
 nav a:hover{
     color: #fff;
@@ -44,7 +49,6 @@ nav a:hover{
     background-color: #f7b843;
     border-radius: 1rem;
     padding: 1rem;
-    margin: 0 2rem;
     color: #000;
     text-decoration: none;
 }
@@ -57,16 +61,17 @@ nav a:hover{
 .principal{
     display:flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     max-width: 1500px;
+    padding-top: 177px;
     margin: auto;
     animation: show 1s ease-in-out backwards;
 }
+
 .personal_photo{
     max-width: 500px;
     margin: 1rem;
-    padding-top: 25vh ;
 }
 .personal_photo img{
     border-radius: 1000px;
@@ -76,7 +81,6 @@ nav a:hover{
 .principal_content{
     width: 600px;
     margin: 1rem;
-    align-self: flex-end;
 }
 
 strong{
@@ -108,9 +112,10 @@ strong{
 }
 
 .flecha{
-    display: flex;
+    width: 100%;
+    align-self: flex-end;
+    display: inline-flex;
     justify-content: center;
-    margin: 28px 0;
     animation: show 1s ease-in-out 1.5s backwards;
 }
 
@@ -135,7 +140,7 @@ strong{
     min-width: 300px;
     max-width: 600px;
     margin: 2rem;
-    min-height: 80vh;
+    min-height: 600px;
 }
 .secciones h2{
     font-size: 1.5rem;
@@ -220,6 +225,8 @@ footer a:hover{
     }
 }
 
+/********************** Media queries **********************/
+
 @media (max-width:680px) {
     .articulo{
         max-width: 350px;
@@ -230,10 +237,8 @@ footer a:hover{
     }
     .articulo div{
         text-align: center;
-        padding:0.5rem ;
+        padding: 0.5rem ;
     }
-}
-@media (max-width:580px){
     header{
         justify-content: center;
         padding-bottom: 0;
@@ -251,13 +256,18 @@ footer a:hover{
     .download_cv{
         margin: 1rem 0;
     }
-
-    #articles-portfolio{
-        padding-top: 25vh;
-    }
 }
 @media (max-width:1163px) {
     .personal_photo img{
         border-radius: 20px;
+    }
+    .social_media{
+        justify-content: center;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
+    }
+    .principal{
+        padding-top: 150px;
+
     }
 }
