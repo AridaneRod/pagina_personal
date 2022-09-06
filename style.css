@@ -66,6 +66,7 @@ nav a:hover{
     max-width: 1500px;
     padding-top: 177px;
     margin: auto;
+    min-height: 100vh;
     animation: show 1s ease-in-out backwards;
 }
 
@@ -140,7 +141,7 @@ strong{
     min-width: 300px;
     max-width: 600px;
     margin: 2rem;
-    min-height: 600px;
+    min-height: 650px;
 }
 .secciones h2{
     font-size: 1.5rem;
