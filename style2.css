@@ -57,7 +57,7 @@ body{
     display: flex;
     max-width: 800px;
     margin: auto;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
 }
 .header img{
     max-width: 150px;
@@ -166,7 +166,7 @@ footer a:hover{
         position: absolute;
     }
     .header img{
-        opacity: 0.15;
+        opacity: 0.25;
         max-width: 200px;
     }
 }
